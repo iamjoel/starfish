@@ -15,6 +15,9 @@ Alchemy支持：ETH、Polygon、Solana、Arbitrum、Optimism。
 
 还不错的教程: [Alchemy 连接链下与链上的桥梁](https://mp.weixin.qq.com/s/Aij1PUB0IFqrE5gAnQDamQ)。
 
+## 操作库
+* [web3js](https://web3js.org/)
+
 ## 代码脚手架
 Scaffold-ETH 系列。整合的技术栈：
 * Solidity for writing smart contracts.
