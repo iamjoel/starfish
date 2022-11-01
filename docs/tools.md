@@ -1,4 +1,6 @@
 # 工具
+## [StackExchange](https://ethereum.stackexchange.com/)
+Eth的问答网站。类似stackoverflow。
 ## Solidity
 ### [Remix IDE](https://remix.ethereum.org/)
 Solidity 的 Web IDE，集成了编译器和 Solidity 运行时环境。
@@ -14,6 +16,20 @@ Alchemy支持：ETH、Polygon、Solana、Arbitrum、Optimism。
 类似的工具：[Infura](https://infura.io/zh)，Quicknode、Moralis、Pocket。
 
 还不错的教程: [Alchemy 连接链下与链上的桥梁](https://mp.weixin.qq.com/s/Aij1PUB0IFqrE5gAnQDamQ)。
+
+## [ganache](https://www.npmjs.com/package/ganache)
+本地 fork 一个测试网络的工具。
+
+安装
+```
+npm install ganache --global
+```
+
+启动
+```
+ganache
+```
+
 
 ## 操作库
 * [web3js](https://web3js.org/)

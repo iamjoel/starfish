@@ -352,10 +352,19 @@ constructor() payable {
 }
 ```
 
-发送 Ether 的方法。 在 payable 的地址上调用：
-* transfer (2300 gas, throws error)
-* send (2300 gas, returns bool)
+发送 Ether 的方法。 在 payable 的地址有如下方法：
+* transfer (2300 gas, throws error): 失败的时候抛错。
+* send (2300 gas, returns bool)： 失败的时候返回 false。
 * call (forward all gas or set gas, returns bool)
+
+```
+<address payable>.transfer(amount)
+msg.sender.transfer(1 eth)
+msg.sender.call.value(amount)
+```
+
+意思是： 当前合约向某个地址转 amount 个 eth。
+
 
 详情： [Sending Ether (transfer, send, call)](https://solidity-by-example.org/sending-ether/)
 
@@ -388,3 +397,7 @@ library Math {
     }
 }
 ```
+
+## 其他
+msg.sender: 调用合约者
+msg.value: 调用的eth值。
