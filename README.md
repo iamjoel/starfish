@@ -51,16 +51,19 @@ ERC20，ERC721（NTF那）
 实现的库https://github.com/OpenZeppelin/openzeppelin-contracts/
 openZeppelin
 
-# NTF
-NFT 对应的 图片，音频，视频等，是存在 IPFS 上的。
+
 
 
 # 一站式框架
 重一点的框架： thirdweb.js.  包含： 合约的调用，协议的实现， 部署，
 
-# 测试环境（链）
-Achemy，
-hardhat
+# Relay
+> 这个角色隐藏在 Provider/Signer 之后，是真正负责我们与区块链的某一个节点同步状态的服务器集群，它保存了所有账本（全节点）它通常是 Infura、Alchemy、Quicknode、Moralis 或者 Pocket 提供的服务。
+
+# 预言机
+## [Chainlink](https://chain.link/)
+> Securely connect smart contracts with off-chain data and services
+
 
 # 业务场景
 1. 更新智能合约的逻辑。 
@@ -71,12 +74,17 @@ hardhat
 # Defi
 
 # GameFi
+Axie,StepN。
+
 道具上链。
 
 玩法上链。
 
 # NFT
+OpenSea。
+
 门槛低，受众广。
 
+NFT 对应的 图片，音频，视频等，是存在 IPFS 上的。
 # Dao
 代币（经济）（ERC20） + 治理（成员的进入，离开； 荣耀（贡献值）体系，投票）
