@@ -376,7 +376,7 @@ msg.sender.call.value(amount)
 import "./Foo.sol";
 import {Unauthorized, add as func, Point} from "./Foo.sol";
 import "https://github.com/owner/repo/blob/branch/path/to/Contract.sol";
-````
+```
 
 ## Library
 工具方法的封装：
@@ -400,4 +400,21 @@ library Math {
 
 ## 其他
 msg.sender: 调用合约者
-msg.value: 调用的eth值。
+msg.value: 随消息发送的wei的数量。
+
+address(this)： 当前智能合约的地址。address(this).balance。
+
+### assembly
+汇编
+```
+assembly {
+  // start writing evm assembler language
+}
+```
+
+https://docs.soliditylang.org/en/latest/assembly.html
+
+https://learnblockchain.cn/article/675#%E6%B1%87%E7%BC%96%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E4%BB%8B%E7%BB%8D
+
+### 全局变量
+https://docs.soliditylang.org/en/develop/units-and-global-variables.html
