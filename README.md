@@ -38,7 +38,7 @@ Web3: 去中心化，安全的网络。数据的所有权属于内容的生产�
 #### 共识机制
 常见的 Pow 和 PoS。
 
-Eth 在 2022年10月，从 Pow 转向了 Pos。为了以为分片的升级。
+Eth 在 2022年10月，从 Pow 转向了 Pos。为了以为支持分片(一种能提升交易速度的手段）等一系列的升级。
 
 
 #### Layer1
@@ -115,12 +115,12 @@ NFT + DeFi
   * 编程语音：Solidity(Evm 上的编程语言)。
   * 与区块链交互：Relay层。Alchemy，Infura等提供的服务。
   * 调用智能合约 eth.js, web3.js
+  * Hardhat: 编译到本地，用 eth.js 和智能合约交互。 [代码](./code/hardhat-demo/scripts/token.js)
 * 测试
   * 测试网络
 * 安全扫描
   * 整数溢出问题。 防御库：SafeMath
 * 部署
-  * Hardhat
   * Remix
 * 优秀代码
   * [openzeppelin-contracts](https://github.com/OpenZeppelin/openzeppelin-contracts)
