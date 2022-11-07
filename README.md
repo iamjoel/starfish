@@ -1,5 +1,11 @@
-# Web3 Note
-去中心化，透明，安全，匿名。
+# Starfish
+> 一只断了一条腿的蜘蛛是什么蜘蛛呢？  
+> 是七条腿的蜘蛛。  
+> 一只断了一条腿的海星是什么海星呢？  
+> 还是一只完整的海星。  
+> \- [《去中心化VS中心化，无法调和的矛盾？》](https://zhuanlan.zhihu.com/p/34510014)
+
+Web3 学习笔记。 Web3：去中心化，透明，安全，匿名。
 
 ## 概念
 1. Web1，Web2，Web 3 的区别。
@@ -25,11 +31,14 @@ Web3: 去中心化，安全的网络。数据的所有权属于内容的生产�
 
 区块链如果是一个数据库，智能合约可以理解为一张表，以及对表的操作。
 
+### 其他
+* [ZK 证明](docs/concept/zk.md)
+
 ## 基础设施
 * 区块链
+* 跨链桥
 * 去中心化储存方案
 * 预言机
-* 一些理论支持: zk证明等。
 
 
 ### 区块链
@@ -50,14 +59,24 @@ Solana，aptos 选的的拓展性和。
 
 ##### 编程语言
 * solidity： Eth 和一些兼容 env 的链。
-* Move: Aptos 和 Sui： 
+* Move: Aptos 和 Sui。
 
 还有用：go，c#，rust的。
 
 #### Layer2
 给 Layer1 扩容：增加每秒处理速度。
 
-pologen。
+polygen 等。
+
+### 跨链桥
+> 跨链桥是将代币或数据在不同区块链之间转移的方式，两条链可以具有不同的协议、规则和治理模型，跨链桥提供了一种兼容的方式在两者之间安全地进行互操作。
+
+跨链桥比较难的是做到安全。
+
+产品:
+* [wormhole](https://wormhole.com/)
+* [layerzero](https://layerzero.network/)
+
 
 ### 去中心化储存方案
 我们通常会将资产的元数据、DApp UI 界面等储存在去中心化储存网络当中，以防止单点故障导致的资产损失和不可用。
@@ -73,11 +92,6 @@ pologen。
 产品 [Chainlink](https://chain.link/)
 > Securely connect smart contracts with off-chain data and services
 
-### 一些理论支持
-#### ZK 证明
-ZK 证明使用密码学允许某人（证明者）向其他人（验证者）证明事实是百分百真实的，但除了特定真实性的陈述之外，不会透露任何额外信息。即能保守秘密，又能让人相信你。
-
-比如：可以使用 ZK 证明来证明我拥有某个 NFT 的事实，而无需透露我拥有哪一个、购买时间或所花金额。
 
 ## 应用场景
 * Defi
@@ -146,3 +160,4 @@ NFT + DeFi
 ## 链接
 * [资源](docs/resource.md)
 * [工具](docs/tools.md)
+* [安全](docs/security/README.md)
