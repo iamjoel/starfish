@@ -418,3 +418,10 @@ https://learnblockchain.cn/article/675#%E6%B1%87%E7%BC%96%E7%9B%B8%E5%85%B3%E7%9
 
 ### 全局变量
 https://docs.soliditylang.org/en/develop/units-and-global-variables.html
+
+## [发送和接收 以太币](https://solidity-cn.readthedocs.io/zh/develop/security-considerations.html)
+如果一个合约收到了 以太币Ether （且没有函数被调用），就会执行 fallback 函数。 如果没有 fallback 函数，那么 以太币Ether 会被拒收（同时会抛出异常）。为了确保你的合约可以通过这种方式收到 以太币Ether，请你核对 fallback 函数所需的 gas 数量。
+
+ 你只可以将以太币一起发送至拥有 payable 修饰符的函数，不然会抛出异常。
+
+
