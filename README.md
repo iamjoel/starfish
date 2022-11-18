@@ -59,7 +59,7 @@ Solana，aptos 选的的拓展性和。
 
 ##### 编程语言
 * solidity： Eth 和一些兼容 env 的链。
-* Move: Aptos 和 Sui。
+* Move: Aptos,Sui 和 starcoin。
 
 还有用：go，c#，rust的。
 
@@ -71,9 +71,11 @@ polygen 等。
 ### 跨链桥
 > 跨链桥是将代币或数据在不同区块链之间转移的方式，两条链可以具有不同的协议、规则和治理模型，跨链桥提供了一种兼容的方式在两者之间安全地进行互操作。
 
-跨链桥比较难的是做到安全。
+跨链桥比较难的是做到安全。号称黑客提款机。[更多](./docs/concept/cross-chain.md)
+
 
 产品:
+* [十大主流生态跨链桥整理](https://mirror.xyz/3344521.eth/dD-QSbnCeJIFYcewKErp9Hcnc2Lh8oNSWU0G67Yh76s)
 * [wormhole](https://wormhole.com/)
 * [layerzero](https://layerzero.network/)
 
