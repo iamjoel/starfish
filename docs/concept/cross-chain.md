@@ -6,7 +6,10 @@
 
 跨链一般转移的都是资产(代币) 。也会有 NFT。也会有信息，事件等。
 
-产品：
+## 技术方案
+保证跨链桥的安全性。跨链桥常采用外部中继人的模式。
+
+## 产品
 1. [XY Finance](https://xy.finance/)
 2. [xPollinate（Connext）](https://www.xpollinate.io/)
 3. [Wormhole](https://wormholebridge.com/#/)
