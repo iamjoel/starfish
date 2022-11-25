@@ -11,6 +11,7 @@ Web3 学习笔记。 Web3：去中心化，透明，安全，匿名。
 1. Web1，Web2，Web 3 的区别。
 2. 区块链
 3. 智能合约
+4. [名词解释](./docs/concept/none.md)
 
 ### Web1，Web2，Web 3 的区别
 Web1: 只读网络。 网络的内容都是公司生产的。代表性产品主要是门户网站：新浪，搜狐，网易等。
@@ -102,10 +103,23 @@ polygen 等。
 * Dao
 
 ### Defi
-DEX: 去中心化交易。  
-CEX: 中心和交易。
+优势跨国界。
 
-跨国界。
+#### 交易所
+DEX: 去中心化交易。 如：币安，Coinbase 等。
+CEX: 中心和交易。如：Uniswap。
+
+
+交易聚合器: 聚合各种 DEX 协议。可以增加 DEX 产品流动性和让用户找到更低的交易费用低（在 DEX 中比价）。产品如： [1inch](https://1inch.io/)，[Matcha](https://matcha.xyz/)，Meta Mask 钱包内置 Meta Mask Swap。
+
+#### 金融类产品
+钱包：包含智能合约钱包和MPC钱包（如 [Bitizen](https://bitizen.org/))。
+
+借贷，期权，保险等。
+
+借贷的抵押物是数字货币或NFT。
+
+期权平台。对某个币的看涨，看跌期权。比如：[Opyn](https://v2.opyn.co/#/)
 
 ### NFT
 非同质化化Token。门槛低，受众广。
@@ -130,7 +144,7 @@ NFT + DeFi
 * 开发
   * 编程语音：Solidity(Evm 上的编程语言)。
   * 与区块链交互：Relay层。Alchemy，Infura等提供的服务。
-  * 调用智能合约 eth.js, web3.js
+  * 调用智能合约 [ethers.js](https://docs.ethers.io/v5/), web3.js
     * [连接到Metamask](./code/connect-to-wallet/README.md)
   * Hardhat: 编译到本地，用 eth.js 和智能合约交互。 [代码](./code/hardhat-demo/scripts/token.js)
 * 测试
