@@ -1,14 +1,13 @@
 import {useState, useEffect} from 'react'
 import { ethers } from 'ethers'
-
-import './App.css';
+import connectToMetamask from '@/utils/connect-to-meta-mask'
 
 const ethereum = window.ethereum
 const toChainId = '0x1' // 0x38: 币安链;0x43114。https://chainlist.org/zh
 
 function App() {
   const [signer, setSigner] = useState(null)
-
+  const [address, setAddress] = useState('')
   useEffect(() => {
       const init = async () => {
         await doConnect()
@@ -38,17 +37,18 @@ function App() {
   }
 
   const doConnect = async (notSwitch) => {
-      if(!ethereum || !ethereum.isMetaMask) {
+    if(!ethereum || !ethereum.isMetaMask) {
         alert('Please install Metamask plugins')
         return
     }
-    // https://docs.ethers.io/v5/getting-started/#getting-started--connecting
-    const provider = new ethers.providers.Web3Provider(window.ethereum)
-    // 没有连接的话，会弹框。
-    await provider.send("eth_requestAccounts", [])
-    const signer = provider.getSigner()
+    const { signer } = await connectToMetamask()
     const address = await signer.getAddress() // 同等于：window.ethereum.selectedAddress
+    setAddress(address)
     let chainId = await ethereum.request({ method: 'eth_chainId' })
+    console.log(`connected! Address: ${address}`)
+    if(true) {
+        return
+    } 
     // 切换到 Mainnet
     if(!notSwitch && chainId !== toChainId) {
         // 会弹出框
@@ -86,7 +86,11 @@ function App() {
   }
   return (
     <div className="App">
+      <h1>连接到 MetaMask</h1>
       <button onClick={connectMetamask}>Connect to Metamask</button>
+      {
+          address && <div>address: {address}</div>
+      }
     </div>
   );
 }

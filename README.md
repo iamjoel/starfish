@@ -143,16 +143,23 @@ NFT + DeFi
 ### 概览
 * 开发
   * 编程语音：Solidity(Evm 上的编程语言)。
-  * 与区块链交互：Relay层。Alchemy，Infura等提供的服务。
+  * 与区块链交互：Relay层。三种：
+    * Alchemy，Infura等提供的服务。
+    * Meta Mask 之类的钱包提供的服务。
+    * 本地的 JSON RPC。 比如：[Ganache](https://trufflesuite.com/ganache/)。
   * 调用智能合约 [ethers.js](https://docs.ethers.io/v5/), web3.js
-    * [连接到Metamask](./code/connect-to-wallet/README.md)
-  * Hardhat: 编译到本地，用 eth.js 和智能合约交互。 [代码](./code/hardhat-demo/scripts/token.js)
+    * [连接到Metamask](./code/playground/src/views/connect-wallet/README.md)
+    * [与智能合约交互](./code/playground/src/views/call-abi/README.md)
+  * 开发套件。编译，与智能合约交互，部署上链。
+    * Hardhat。要通过插件来部署。 
+      * [调用智能合约](./code/hardhat-demo/scripts/token.js)
+    * [Remix](https://remix.ethereum.org/) Web IDE。上手简单。部署到本地和指定链都很容易。选对应的 Environment 即可。部署到测试链，环境选 `Injected Provider - MetaMask`；MetaMask 连哪个链，就部署到哪个链。
+    * [Truffle](https://trufflesuite.com/)。有点老。本地跑区块链的工具：[Ganache](https://trufflesuite.com/ganache/)
 * 测试
   * 测试网络
+    * [goerli 网络水龙头](https://goerlifaucet.com/)
 * 安全扫描
   * 整数溢出问题。 防御库：SafeMath
-* 部署
-  * Remix
 * 优秀代码
   * [openzeppelin-contracts](https://github.com/OpenZeppelin/openzeppelin-contracts)
   * [moloch](https://github.com/MolochVentures/moloch)

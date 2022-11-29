@@ -1,0 +1,25 @@
+.main {
+    display: flex;
+}
+
+.left {
+    box-sizing: border-box;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    width: 300px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.right {
+    padding: 20px;
+}
+
+.link {
+    display: block;
+    line-height: 1.5;
+}
+
+.right {
+    flex-grow: 1;
+}

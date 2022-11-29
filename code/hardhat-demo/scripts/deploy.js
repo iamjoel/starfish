@@ -11,9 +11,10 @@ async function main() {
   const ONE_YEAR_IN_SECS = 365 * 24 * 60 * 60;
   const unlockTime = currentTimestampInSeconds + ONE_YEAR_IN_SECS;
 
-  const lockedAmount = hre.ethers.utils.parseEther("1");
+  const lockedAmount = hre.ethers.utils.parseEther("1000");
 
   const Lock = await hre.ethers.getContractFactory("Lock");
+  // 第一个参数：构造函数传参。第二个参数的value：费用。
   const lock = await Lock.deploy(unlockTime, { value: lockedAmount });
 
   await lock.deployed();
@@ -21,6 +22,8 @@ async function main() {
   console.log(
     `Lock with 1 ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
   );
+
+  await lock.withdraw()
 }
 
 // We recommend this pattern to be able to use async/await everywhere
