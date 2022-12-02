@@ -41,7 +41,6 @@ Web3: 去中心化，安全的网络。数据的所有权属于内容的生产�
 * 去中心化储存方案
 * 预言机
 
-
 ### 区块链
 > 将对中心的信任，转化到对算法的信任。
 
@@ -69,7 +68,7 @@ Solana，aptos 选的的拓展性和。
 
 polygen 等。
 
-### 跨链桥
+### 跨链
 > 跨链桥是将代币或数据在不同区块链之间转移的方式，两条链可以具有不同的协议、规则和治理模型，跨链桥提供了一种兼容的方式在两者之间安全地进行互操作。
 
 跨链桥比较难的是做到安全。号称黑客提款机。[更多](./docs/concept/cross-chain.md)
@@ -113,9 +112,9 @@ CEX: 中心和交易。如：Uniswap。
 交易聚合器: 聚合各种 DEX 协议。可以增加 DEX 产品流动性和让用户找到更低的交易费用低（在 DEX 中比价）。产品如： [1inch](https://1inch.io/)，[Matcha](https://matcha.xyz/)，Meta Mask 钱包内置 Meta Mask Swap。
 
 #### 金融类产品
-钱包：分类包含 密钥钱包(如 Metamask)，MPC钱包（如 [Bitizen](https://bitizen.org/)） 和 智能合约钱包。
+钱包：分类包含 密钥钱包(如 Metamask)，MPC钱包（如 [Bitizen](https://bitizen.org/)） 和 智能合约钱包。智能合约钱包是是趋势：用户体验好，密钥能恢复。
 
-借贷，期权，保险等。
+借贷（如 Compound），衍生品（期权等，如 dydx），保险等。
 
 借贷的抵押物是数字货币或NFT。
 
@@ -185,4 +184,4 @@ NFT + DeFi
 * [资源](docs/resource.md)
 * [工具](docs/tools.md)
 * [安全](docs/security/README.md)
-* 
+  
