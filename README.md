@@ -87,7 +87,7 @@ polygen 等。
 常见的方案：
 * IPFS：最早和最流行的去中心化储存网络。
 * Filecoin：以 IPFS 为基础的储存网络。
-* Arweave(AR)：去中心化的永存网络，一次写入付费，读数据免费。
+* [Arweave](https://www.arweave.org/)：去中心化的永存网络，一次写入付费，读数据免费。
 
 ### 预言机
 合约读取链下的数据的工具。
@@ -113,7 +113,7 @@ CEX: 中心和交易。如：Uniswap。
 交易聚合器: 聚合各种 DEX 协议。可以增加 DEX 产品流动性和让用户找到更低的交易费用低（在 DEX 中比价）。产品如： [1inch](https://1inch.io/)，[Matcha](https://matcha.xyz/)，Meta Mask 钱包内置 Meta Mask Swap。
 
 #### 金融类产品
-钱包：包含智能合约钱包和MPC钱包（如 [Bitizen](https://bitizen.org/))。
+钱包：分类包含 密钥钱包(如 Metamask)，MPC钱包（如 [Bitizen](https://bitizen.org/)） 和 智能合约钱包。
 
 借贷，期权，保险等。
 
@@ -185,3 +185,4 @@ NFT + DeFi
 * [资源](docs/resource.md)
 * [工具](docs/tools.md)
 * [安全](docs/security/README.md)
+* 
