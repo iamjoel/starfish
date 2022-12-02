@@ -14,6 +14,8 @@ npx hardhat node
 npx hardhat run scripts/deploy.js
 ```
 
+以太坊文档: [这里](https://ethereum.org/zh/developers/docs/dapps/)
+
 ## example
 * [get someone's balance and transfer](./scripts/token.js)
 

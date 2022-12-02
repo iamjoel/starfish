@@ -157,7 +157,7 @@ NFT + DeFi
     * [Truffle](https://trufflesuite.com/)。有点老。本地跑区块链的工具：[Ganache](https://trufflesuite.com/ganache/)
 * 测试
   * 测试网络
-    * [goerli 网络水龙头](https://goerlifaucet.com/)
+    * goerli [浏览器](https://goerli.etherscan.io/) [水龙头](https://goerlifaucet.com/)
 * 安全扫描
   * 整数溢出问题。 防御库：SafeMath
 * 优秀代码
