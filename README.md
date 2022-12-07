@@ -103,12 +103,13 @@ polygen 等。
 ### Defi
 优势跨国界。
 
-#### 交易所
+#### [交易所](docs/product/market/README.md)
 DEX: 去中心化交易。 如：币安，Coinbase 等。
-CEX: 中心和交易。如：Uniswap。
-
+CEX: 中心和交易。如：Uniswap, Curve 等。
 
 交易聚合器: 聚合各种 DEX 协议。可以增加 DEX 产品流动性和让用户找到更低的交易费用低（在 DEX 中比价）。产品如： [1inch](https://1inch.io/)，[Matcha](https://matcha.xyz/)，Meta Mask 钱包内置 Meta Mask Swap。
+
+[稳定币](./docs/product/token/README.md)
 
 #### 金融类产品
 钱包：分类包含 密钥钱包(如 Metamask)，MPC钱包（如 [Bitizen](https://bitizen.org/)） 和 智能合约钱包。智能合约钱包是是趋势：用户体验好，密钥能恢复。
