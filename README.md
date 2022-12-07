@@ -45,21 +45,20 @@ Web3: 去中心化，安全的网络。数据的所有权属于内容的生产�
 > 将对中心的信任，转化到对算法的信任。
 
 #### 共识机制
-常见的 Pow 和 PoS。
+常见的 Pow，PoS 和 PoH。
 
 Eth 在 2022年10月，从 Pow 转向了 Pos。为了以为支持分片(一种能提升交易速度的手段）等一系列的升级。
-
 
 #### Layer1
 区块链的不可能三角： 扩展性（Scalability）、去中心化（Decentralization）、安全（Security）。扩展性指交易的速度。
 
 比特币和 Eth 选的安全性和去中心化。
 
-Solana，aptos 选的的拓展性和。
+Solana，aptos 选的的拓展性和安全性。
 
 ##### 编程语言
-* solidity： Eth 和一些兼容 env 的链。
-* Move: Aptos,Sui 和 starcoin。
+* Solidity： Eth 和一些兼容 env 的链。[语法](docs/chain/eth/solidity/grammar.md)
+* Move: Aptos, Sui 和 starcoin。
 
 还有用：go，c#，rust的。
 
@@ -184,4 +183,3 @@ NFT + DeFi
 * [资源](docs/resource.md)
 * [工具](docs/tools.md)
 * [安全](docs/security/README.md)
-  
