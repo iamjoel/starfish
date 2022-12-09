@@ -34,7 +34,13 @@ ganache
 ## 操作库
 * [web3js](https://web3js.org/)
 * ethers.js
-* [wagmi](https://wagmi.sh/) react hooks 库。
+* hooks 库
+  * [wagmi](https://wagmi.sh/) react hooks 库。
+  * [useDapp](https://github.com/TrueFiEng/useDApp)
+
+## UI 库
+* [Web3 UIKit](https://github.com/web3ui/web3uikit) [演示](https://web3ui.github.io/web3uikit/?path=/story/1-web3-parse-blockie--custom-seed) [官网](https://usedapp.io/)
+
 
 ## 代码脚手架
 Scaffold-ETH 系列。整合的技术栈：
