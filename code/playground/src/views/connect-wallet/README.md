@@ -30,21 +30,54 @@ await ethereum.request({
 })
 ```
 
-## 添加链
+## 添加链的配置
+链的配置见： [这里](https://chainid.network/chains.json)。链的信息: [EVM-based Chains](https://github.com/ethereum-lists/chains)。钱包中加链的配置: [chainlist](https://chainlist.org/zh)。
 ```js
 await ethereum.request({
   method: 'wallet_addEthereumChain',
   params: [
     {
-      chainId: '0x38',
-      chainName: 'Binance Smart Chain',
-      rpcUrls: ['https://bsc-dataseed.binance.org/']
+      chainName: 'Binance Smart Chain Mainnet',
+      chainId: '0x38', // 十进制：56
+      rpcUrls: [
+        'https://bsc-dataseed1.binance.org',
+        'https://bsc-dataseed2.binance.org',
+        'https://bsc-dataseed3.binance.org',
+        'https://bsc-dataseed4.binance.org',
+        'https://bsc-dataseed1.defibit.io',
+        'https://bsc-dataseed2.defibit.io',
+        'https://bsc-dataseed3.defibit.io',
+        'https://bsc-dataseed4.defibit.io',
+        'https://bsc-dataseed1.ninicoin.io',
+        'https://bsc-dataseed2.ninicoin.io',
+        'https://bsc-dataseed3.ninicoin.io',
+        'https://bsc-dataseed4.ninicoin.io',
+      ],
+      nativeCurrency: {
+        name: 'Binance Chain Native Token',
+        symbol: 'BNB',
+        decimals: 18,
+      },
+      blockExplorerUrls: ['https://bscscan.com'],
     }
   ]
 })
 ```
 
-链的配置: [chainlist](https://chainlist.org/zh)
+zkSync 的配置: 
+```js
+{
+  chainName: 'zkSync alpha testnet',
+  chainId: '0x118', // 十进制：280
+  rpcUrls: ['https://zksync2-testnet.zksync.dev'],
+  nativeCurrency: {
+    name: 'Ether',
+    symbol: 'ETH',
+    decimals: 18,
+  },
+  blockExplorerUrls: ['https://zksync2-testnet.zkscan.io'],
+}
+```
 
 ## 监听链的变化
 ```js
