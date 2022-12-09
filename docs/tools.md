@@ -33,6 +33,8 @@ ganache
 
 ## 操作库
 * [web3js](https://web3js.org/)
+* ethers.js
+* [wagmi](https://wagmi.sh/) react hooks 库。
 
 ## 代码脚手架
 Scaffold-ETH 系列。整合的技术栈：
