@@ -1,4 +1,15 @@
 # 资源
+## [区块链 Dapp 开发教程](https://github.com/Dapp-Learning-DAO/Dapp-Learning/blob/main/README-CN.md)
+> 通过经典项目一步一步学习区块链 Dapp 开发。
+
+由浅到深了解和开发 DeFi, NFT, DAO, CRYPTO 项目。
+
+## [WTF 学院](https://wtf.academy/)
+> 面向Web2开发者的Web3开源学院。学习，贡献，并获得链上技术认证
+
+[Dapp-Learning开源大学](https://docs.qq.com/doc/DQ3hWeVVXQ3JPbXFS?u=39ff5586f8e64876afbe8522bfca92e4) 
+[视频](https://docs.qq.com/doc/DQ3hWeVVXQ3JPbXFS?u=39ff5586f8e64876afbe8522bfca92e4)。
+
 ## [Web3 DApp 最佳编程实践指南](https://guoyu.mirror.xyz/RD-xkpoxasAU7x5MIJmiCX4gll3Cs0pAd5iM258S1Ek)
 
 ## [北京大学: 《区块链技术与应用》](http://zhenxiao.com/blockchain/)
@@ -10,7 +21,9 @@
 
 对应的 Repos: [DApp Best Practice Stack](https://github.com/stars/guo-yu/lists/dapp-best-practice-stack)。
 
+## [dapp tags repo](https://github.com/topics/dapp)
 
 ## Move
+* [ETHEREUM DEVELOPMENT DOCUMENTATION](https://ethereum.org/en/developers/docs/)
 * https://movetool.app/
 * [Move Design Pattern](https://www.move-patterns.com/)

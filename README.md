@@ -101,9 +101,12 @@ polygen 等。
 * Dao
 
 ### Defi
+主要分为三块：交易，借贷 和衍生品。
+
 优势跨国界。
 
-#### [交易所](docs/product/market/README.md)
+#### 1 交易
+[交易所](docs/product/market/README.md)
 DEX: 去中心化交易。 如：币安，Coinbase 等。
 CEX: 中心和交易。如：Uniswap, Curve 等。
 
@@ -111,14 +114,18 @@ CEX: 中心和交易。如：Uniswap, Curve 等。
 
 [稳定币](./docs/product/token/README.md)
 
-#### 金融类产品
-钱包：分类包含 密钥钱包(如 Metamask)，MPC钱包（如 [Bitizen](https://bitizen.org/)） 和 智能合约钱包。智能合约钱包是是趋势：用户体验好，密钥能恢复。
-
-借贷（如 Compound），衍生品（期权等，如 dydx），保险等。
+#### 2 借贷
+AAVE，Compound，Liquity，Euler.
 
 借贷的抵押物是数字货币或NFT。
 
+#### 3 衍生品
+dydx，保险等。
+
 期权平台。对某个币的看涨，看跌期权。比如：[Opyn](https://v2.opyn.co/#/)
+
+#### 金融类产品
+钱包：分类包含 密钥钱包(如 Metamask)，MPC钱包（如 [Bitizen](https://bitizen.org/)） 和 智能合约钱包。智能合约钱包是是趋势：用户体验好，密钥能恢复。
 
 ### NFT
 非同质化化Token。门槛低，受众广。
@@ -155,8 +162,9 @@ NFT + DeFi
     * [Remix](https://remix.ethereum.org/) Web IDE。上手简单。部署到本地和指定链都很容易。选对应的 Environment 即可。部署到测试链，环境选 `Injected Provider - MetaMask`；MetaMask 连哪个链，就部署到哪个链。
     * [Truffle](https://trufflesuite.com/)。有点老。本地跑区块链的工具：[Ganache](https://trufflesuite.com/ganache/)
 * 测试
-  * 测试网络
-    * goerli [浏览器](https://goerli.etherscan.io/) [水龙头](https://goerlifaucet.com/)
+  * [测试网络](https://ethereum.org/en/developers/docs/networks/)
+    * Goerli  is the recommended default testnet for testing of validating and staking. [浏览器](https://goerli.etherscan.io/) [水龙头](https://goerlifaucet.com/)
+    * Sepolia is the recommended default testnet for application development
 * 安全扫描
   * 整数溢出问题。 防御库：SafeMath
 * 优秀代码
