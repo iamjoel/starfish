@@ -20,7 +20,7 @@ V3 的优化:提升了资产使用的效率。
 
 V2 中，流动性沿着价格曲线均匀分布。虽然这样可以处理 0 到无穷之间的所有价格区间，但这使得资本的效率相当低下。这是因为大多数资产通常在一定的价格范围内交易。
 
-V3 中，LP 自己选择价格区间(两个token的比例)，如果这个区间覆盖了成交价格，则可以获得交易费分成。LP 可以在多个价格区间提供流动性。
+V3 中，LP 自己选择价格区间(两个token的比例)，如果这个区间覆盖了成交价格，则可以获得交易费分成。LP 可以在多个价格区间提供流动性。工具: [Uniswap V3 Calculator & Simulator](https://www.metacrypt.org/tools/uniswap-v3-calculator-simulator/?network=ethereum&token0=0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2&token1=0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48&feeTier=3000)
 
 范围限价订单（Range Limit Orders）：允许 LP 在高于或低于当前市场自定义价格范围内提供单一代币作为流动性。当市场价格进入指定范围时，一种资产将沿着平滑曲线出售给另一种资产——同时在此过程中仍可赚取掉期费用。
 
