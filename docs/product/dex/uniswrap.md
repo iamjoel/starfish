@@ -30,7 +30,7 @@ V3 对 LP 的要求变高了。选择一个错误的价格区间可能会放大�
 [Uniswap V3 到底是什么鬼？一文带你了解V3新特性](https://zhuanlan.zhihu.com/p/359732262)
 
 ## Dapp中接入 Uniswrap
-[uniswap-first-contract-example](https://github.com/Uniswap/uniswap-first-contract-example) swap 的[demo](https://github.com/Uniswap/uniswap-first-contract-example/blob/simple-swap-complete-example/contracts/SimpleSwap.sol)
+通过自己写的智能合约调用Uniswap: [uniswap-first-contract-example](https://github.com/Uniswap/uniswap-first-contract-example) swap 的[demo](https://github.com/Uniswap/uniswap-first-contract-example/blob/simple-swap-complete-example/contracts/SimpleSwap.sol)
 
 
 直接在前端接入[widgets-cra5](https://github.com/Uniswap/widgets-demo/tree/cra)
@@ -39,6 +39,87 @@ V3 对 LP 的要求变高了。选择一个错误的价格区间可能会放大�
 治理内容：发起提案(propose)，投票，改uniswap的协议额。
 
 [关于治理(Governance)的文档](https://docs.uniswap.org/contracts/v2/reference/Governance/governance-reference)
+
+## 计算Uniswap 的TVL
+TVL: 所有锁定在合约里的token价值。
+
+### 方法1: 用 Subgraph
+[Uniswap V3 Subgraph](https://thegraph.com/hosted-service/subgraph/uniswap/uniswap-v3)
+
+直接拿：
+```
+{
+  factory(id: "0x1F98431c8aD98523631AE4a59f267346ea31F984" ) {
+    totalValueLockedUSD
+  }
+}
+```
+
+返回:
+```
+{
+  "data": {
+    "factory": {
+      "totalValueLockedUSD": "1088811070468.012189179066115282027"
+    }
+  }
+}
+```
+
+
+在控制台看到对应的接口调用。
+
+
+其他做法：
+
+TVL 排名前 N 的值 Pool，求和
+```js
+{
+  pools(first: 10, orderBy: totalValueLockedUSD, orderDirection: desc) 
+  { id, token0{symbol}, token1{symbol}, totalValueLockedUSD, volumeUSD}
+}
+```
+
+需要把数组里 totalValueLockedUSD 求和。
+
+按小时统计：
+```js
+{
+  poolHourDatas(first: 10, orderBy: tvlUSD, orderDirection: desc) 
+  { tvlUSD, volumeUSD, pool{token0{symbol}, token1{symbol}}}
+}
+```
+
+### 方法2： 自己算。找合约，求和
+Uniswap V3 
+找 Uniswap V3 所有流动性 Pool 的合约地址，获取里面的 token 价值的和。截至至 2022/12/15，Pool 有9610 个。
+
+获得合约地址：
+```js
+// 1
+function getPoolKey(
+  address tokenA,
+  address tokenB,
+  uint24 fee
+) internal returns (struct PoolAddress.PoolKey)
+
+// 2
+function computeAddress(
+  address factory,
+  struct PoolAddress.PoolKey key
+) internal returns (address pool)
+```
+[完整介绍](https://docs.uniswap.org/contracts/v3/reference/periphery/libraries/PoolAddress)
+
+获取地址的token：
+```
+balanceToken0 = poolContract.functions.balanceOf(token0Address).call()
+```
+
+更细致一点的，token的value里要去掉费用。见[How to calculate Uniswap v3 pool's Total Value Locked (TVL) on chain?](https://tagmerge.com/question/how-to-calculate-uniswap-v-pool-s-total-value-locked-tvl-on-chain)。
+
+拓展阅读： [Uniswap v3的TVL计算可能是错误的](https://chain-times.cn/news/3168)
+
 
 ## API
 可以查到
@@ -58,11 +139,11 @@ token1Price 的单位是什么？
 ## 工具
 * [Overview of Uniswap](https://github.com/Uniswap/universe)
 * [Uniswap 上各个token的数据](https://info.uniswap.org/#/) 价格，成交量(VOL: Volumes)，TVL。
-  * [The Graph](https://thegraph.com/zh/) The Graph是一个索引协议，用于查询以太坊和IPFS等网络。任何人都可以建立和发布开放的API，称为子图，使数据易于访问。用 GraphQL 的方式查。[Playground](https://thegraph.com/explorer/subgraphs/ELUcwgpm14LKPLrBRuVvPvNKHQ9HvwmtKgKSH6123cr7?view=Playground)
+  *[Playground](https://thegraph.com/explorer/subgraphs/ELUcwgpm14LKPLrBRuVvPvNKHQ9HvwmtKgKSH6123cr7?view=Playground)
   * [Coinmarketcap](https://coinmarketcap.com/api/documentation/v1/) 获取数据的
-* 查询更详细的数据
+* [SubGraph](https://docs.uniswap.org/api/subgraph/overview) 查询详细的数据。用的是[The Graph](https://thegraph.com/zh/) The Graph是一个索引协议，用于查询以太坊和IPFS等网络。任何人都可以建立和发布开放的API，称为子图，使数据易于访问。用 GraphQL 的方式查。
   * [V2](https://thegraph.com/hosted-service/subgraph/uniswap/uniswap-v2) 用 GraphQL 的语法。 示例值: [这里](https://docs.uniswap.org/contracts/v2/reference/API/queries)
-  * [V3](https://thegraph.com/hosted-service/subgraph/uniswap/uniswap-v3)
+  * [V3](https://thegraph.com/hosted-service/subgraph/uniswap/uniswap-v3)。示例: [这里](https://docs.uniswap.org/api/subgraph/guides/examples)。
 
 ## Doc
 * [uniswrap 自动做市的原理](https://docs.uniswap.org/contracts/v2/concepts/protocol-overview/how-uniswap-works)
