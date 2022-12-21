@@ -53,3 +53,15 @@ Scaffold-ETH 系列。整合的技术栈：
 具体：
 * [Scaffold-ETH](https://github.com/scaffold-eth/scaffold-eth)
 * [Scaffold-ETH + ▲ Next.js](https://github.com/scaffold-eth/scaffold-eth/tree/scaffold-nextjs)
+
+## 数据
+* 链上大数据分析平台
+  * [Dune](https://dune.com/) 用SQL的方式查询链上数据
+  * [Nansen](https://www.nansen.ai/) [各种Web3产品的研报(Reports)](https://www.nansen.ai/reports)
+  * [Footprint Analytics](https://www.footprint.network/)
+    * [API](https://docs.footprint.network/reference/get_token-transfers)
+* 监控报警
+  * [Forta](https://forta.org/) Forta detects threats and anomalies on DeFi, NFT, governance, bridges and other Web3 systems in real-time. 
+    * [GraphQL API](https://docs.forta.network/en/latest/forta-api-reference/#query-project) [projects](https://github.com/ethereum-lists/contracts/tree/main/projects)
+    * [Demo](https://github.com/forta-network/forta-bot-examples)
+  * [defi pulse](https://www.defipulse.com/)
