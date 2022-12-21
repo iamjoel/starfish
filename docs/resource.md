@@ -30,3 +30,8 @@
 * [ETHEREUM DEVELOPMENT DOCUMENTATION](https://ethereum.org/en/developers/docs/)
 * https://movetool.app/
 * [Move Design Pattern](https://www.move-patterns.com/)
+
+## 黑客松(hackathon)
+* [Rebase 社区搞的黑客松](https://github.com/rebase-network/2022Q4-hackathon)
+* [Moonshot hackathon](https://moonshothacker.com/)
+* One block

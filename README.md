@@ -85,9 +85,10 @@ polygen 等。
 常见的方案：
 * IPFS：最早和最流行的去中心化储存网络。
 * Filecoin：以 IPFS 为基础的储存网络。
+  * [Eth & Polygon Storage](https://eth.storage/docs)
 * [Arweave](https://www.arweave.org/)：去中心化的永存网络，一次写入付费，读数据免费。
 
-### 预言机
+### 预言机（Oracle)
 合约读取链下的数据的工具。
 
 产品 [Chainlink](https://chain.link/)
